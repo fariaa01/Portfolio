@@ -3,7 +3,7 @@
 👋 Bem-vindo ao meu portfólio pessoal!  
 Este projeto foi desenvolvido para apresentar minhas habilidades, experiências e projetos como desenvolvedor full stack.
 
-🔗 **Acesse online:** [portfolio-se8x.vercel.app](https://portfolio-se8x.vercel.app/)
+🔗 **Acesse online:** [portfolio-se8x.vercel.app](https://portfolio-xdad-7h7nd54tz-fariaa01s-projects.vercel.app)
 
 ---
 
