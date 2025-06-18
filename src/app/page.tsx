@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      
+
       <section
         className="min-h-[80vh] flex flex-col items-center justify-center text-center px-4"
         data-aos="fade-up"
@@ -88,11 +88,11 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">About Me</h2>
           <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
-            I'm a passionate full-stack developer with a focus on building modern, fast, and scalable web applications.
+            I&apos;m a passionate full-stack developer with a focus on building modern, fast, and scalable web applications.
             I love turning complex problems into simple, elegant solutions using technologies like Node.js, Next.js, MySQL, and Tailwind CSS.
             <br /><br />
-            Currently, I’ve been working on SaaS platforms, management systems, and personalized tools for independent professionals and small businesses.
-            I'm constantly learning and improving to deliver high-quality code and user experiences.
+            Currently, I&apos;ve been working on SaaS platforms, management systems, and personalized tools for independent professionals and small businesses.
+            I&apos;m constantly learning and improving to deliver high-quality code and user experiences.
           </p>
         </div>
       </section>
@@ -174,7 +174,7 @@ export default function Home() {
                 icon: Linkedin,
                 title: "LinkedIn",
                 value: "@fariaa01",
-                href: "www.linkedin.com/in/gustavo-faria-239345333",
+                href: "https://www.linkedin.com/in/gustavo-faria-239345333",
               },
               {
                 icon: GithubIcon,
@@ -187,6 +187,7 @@ export default function Home() {
                 key={i}
                 href={href}
                 target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 className="flex flex-col items-center gap-3 text-zinc-400 hover:text-white transition"
               >
