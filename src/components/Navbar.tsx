@@ -22,15 +22,37 @@ const links = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState<string>("home")
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth"
+
+    const sections = document.querySelectorAll("section[id]")
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.6 }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => sections.forEach((section) => observer.unobserve(section))
   }, [])
 
   const handleScroll = (id: string) => {
-    const section = document.getElementById(id)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
+    setActiveSection(id)
+
+    if (id === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    } else {
+      const section = document.getElementById(id)
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" })
+      }
     }
     setIsOpen(false)
   }
@@ -38,15 +60,18 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-zinc-900/60 backdrop-blur-sm border-b border-zinc-800 shadow-md">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-center relative">
-
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex gap-14">
           {links.map(({ icon: Icon, label, id }, i) => (
             <button
               key={i}
               onClick={() => handleScroll(id)}
-              className="group relative flex flex-col items-center text-zinc-300 hover:text-purple-400 transition"
+              className={`group relative flex flex-col items-center transition ${
+                activeSection === id
+                  ? "text-purple-500"
+                  : "text-zinc-300 hover:text-purple-400"
+              }`}
             >
-              <Icon className="w-5 h-5" />
+              <Icon className="w-7 h-7 group-hover:scale-110 transition-transform duration-200 cursor-pointer" />
               <span className="absolute -bottom-6 text-xs opacity-0 group-hover:opacity-100 transition">
                 {label}
               </span>
@@ -95,9 +120,13 @@ export function Navbar() {
                   <li key={index}>
                     <button
                       onClick={() => handleScroll(id)}
-                      className="flex items-center gap-2 text-white text-base hover:text-purple-400 transition"
+                      className={`flex items-center gap-2 text-base group transition ${
+                        activeSection === id
+                          ? "text-purple-500"
+                          : "text-white hover:text-purple-400"
+                      }`}
                     >
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-200 cursor-pointer" />
                       {label}
                     </button>
                   </li>
@@ -110,5 +139,3 @@ export function Navbar() {
     </header>
   )
 }
-
-
