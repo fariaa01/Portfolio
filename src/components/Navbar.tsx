@@ -22,10 +22,8 @@ const links = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
     document.documentElement.style.scrollBehavior = "smooth"
   }, [])
 
