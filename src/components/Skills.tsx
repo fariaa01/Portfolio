@@ -6,10 +6,6 @@ import {
   Code,
   Server,
   FileCode,
-  Mail,
-  Phone,
-  Linkedin,
-  Github as GithubIcon,
 } from "lucide-react"
 
 export function Skills() {

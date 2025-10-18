@@ -8,16 +8,6 @@ import { Typewriter } from "react-simple-typewriter"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { Skills } from "@/components/Skills"
-import {
-  Github,
-  Code,
-  Server,
-  FileCode,
-  Mail,
-  Phone,
-  Linkedin,
-  Github as GithubIcon,
-} from "lucide-react"
 import ProjectCard from "@/components/ProjectCard"
 
 export default function Home() {
@@ -131,7 +121,7 @@ export default function Home() {
             <ProjectCard
               title="Extensions manager"
               description="A tool for managing browser extensions."
-              link="https://github.com/seuusuario/projeto-extensions-manager"
+              link="https://github.com/fariaa01/extensions-manager.git"
             />
           </div>
         </div>
