@@ -18,27 +18,30 @@
 
 O **Portfolio** é meu **site pessoal profissional** desenvolvido para apresentar minhas **habilidades, experiências e projetos** como desenvolvedor full-stack, com **animações premium**, **design moderno** e **experiência de usuário excepcional**.
 
-Criado com foco em **performance, acessibilidade e design responsivo**, oferece uma **navegação fluida** e **visual impactante** para destacar minha trajetória profissional.
+Criado com foco em **performance, acessibilidade e design responsivo**, oferece uma **navegação fluida** e **visual impactante** para destacar minha trajetória profissional de forma atrativa para recrutadores.
 
 🔗 **Acesse online:** [portfolio-se8x.vercel.app](https://portfolio-xdad-7h7nd54tz-fariaa01s-projects.vercel.app)
 
 ---
 
-## Principais Recursos
+## ✨ Principais Recursos
 
 🎯 **Hero Dinâmico** com efeito de máquina de escrever e animações personalizadas  
 ⚡ **Navegação Suave** entre seções com scroll animado  
 🎨 **Animações Premium** com Framer Motion e AOS em todos os elementos  
 📱 **Design 100% Responsivo** (mobile, tablet e desktop)  
-🌙 **Tema Escuro Moderno** com toques de glassmorphism  
-🔄 **Transições Fluidas** entre seções e elementos  
+🌙 **Tema Escuro Moderno** elegante e profissional  
+🔄 **Loading Screen** animado com logo personalizado  
 📊 **Grade Interativa de Skills** com hover effects  
-💼 **Showcase de Projetos** com links diretos para repositórios  
-📧 **Seção de Contato** com múltiplas formas de comunicação  
+💼 **Showcase de Projetos** com preview de imagens e modal gallery  
+📈 **Timeline Profissional** interativa com experiências e educação  
+📧 **Formulário de Contato** funcional com EmailJS  
+🖼️ **Preview de Projetos** com galeria modal e navegação  
+⭐ **Projetos em Destaque** com badges especiais  
 
 ---
 
-## Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 | Stack | Descrição |
 |-------|------------|
@@ -49,11 +52,13 @@ Criado com foco em **performance, acessibilidade e design responsivo**, oferece 
 | 📜 **AOS** | Animações suaves ao fazer scroll |
 | 🎯 **Lucide React** | Ícones modernos e consistentes |
 | ⌨️ **React Simple Typewriter** | Efeito de máquina de escrever |
+| 📧 **EmailJS** | Serviço de email para formulário de contato |
+| 🖼️ **Next/Image** | Otimização automática de imagens |
 | 🚀 **Vercel** | Deploy e hospedagem otimizada |
 
 ---
 
-## Funcionalidades Detalhadas
+## 🚀 Funcionalidades Detalhadas
 
 ### 🎯 Hero Section
 - **Efeito typewriter** com múltiplas profissões
@@ -61,45 +66,91 @@ Criado com foco em **performance, acessibilidade e design responsivo**, oferece 
 - **Micro-interações** em botões com scale effects
 - **Gradiente personalizado** com cores brand
 
+### 🔄 Loading Experience
+- **Loading screen animado** com logo GF personalizado
+- **Barra de progresso** com animação fluida
+- **Transição suave** para conteúdo principal
+- **Context API** para gerenciamento de estado
+
+### 📈 Timeline Profissional
+- **Linha do tempo interativa** com experiências
+- **Seção educacional** com formação acadêmica
+- **Animações ao scroll** para cada item
+- **Tags de tecnologias** utilizadas em cada experiência
+- **Design responsivo** adaptável a todos os dispositivos
+
 ### 🎨 Animações e Interações
 - **Scroll animations** com AOS em todas as seções
 - **Hover effects** em cards e botões
 - **Smooth scrolling** para navegação entre seções
 - **Loading states** otimizados
+- **Framer Motion** para micro-interações premium
 
 ### 💼 Showcase de Projetos
-- **Cards interativos** com preview e links
+- **Cards interativos** com preview de imagens
+- **Modal gallery** com navegação entre screenshots
 - **Hover animations** com transformações suaves
+- **Badges para projetos em destaque** ⭐
+- **Preview de imagens** com fallback para placeholders
 - **Categorização** por tecnologias utilizadas
-- **Links diretos** para repositórios GitHub
+- **Links diretos** para repositórios GitHub e demos
+
+### � Formulário de Contato
+- **Integração com EmailJS** para envio real de emails
+- **Validação de campos** em tempo real
+- **Estados de loading** durante envio
+- **Feedback visual** de sucesso/erro
+- **Design responsivo** com informações de contato
 
 ### 🛠️ Skills Section
 - **Grade responsiva** de tecnologias
 - **Ícones animados** com Devicon e Lucide
 - **Hover effects** com mudança de cor
 - **Organização visual** por categorias
+- **Tooltips informativos** para cada skill
+
+### 🎭 About Me Enhanced
+- **Seção pessoal** com história profissional
+- **Estatísticas de carreira** (projetos, experiência, satisfação)
+- **Cards informativos** sobre foco atual e diferenciais
+- **Texto otimizado** para atrair recrutadores
 
 ---
 
-## Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 src/
 ├── app/                    # App Router (Next.js 15)
 │   ├── layout.tsx         # Layout raiz com metadados
-│   ├── page.tsx           # Página principal
+│   ├── page.tsx           # Página principal integrada
 │   └── globals.css        # Estilos globais
 ├── components/            # Componentes reutilizáveis
-│   ├── ui/               # Componentes base
+│   ├── ui/               # Componentes base (Button, etc.)
+│   ├── AboutMe.tsx       # Seção sobre mim melhorada
+│   ├── ClientOnly.tsx    # Wrapper para hidratação
+│   ├── ContactForm.tsx   # Formulário funcional com EmailJS
+│   ├── Footer.tsx        # Rodapé com links sociais
+│   ├── Loading.tsx       # Tela de loading animada
 │   ├── Navbar.tsx        # Menu de navegação
-│   ├── Footer.tsx        # Rodapé
-│   ├── Skills.tsx        # Seção de habilidades
-│   └── ProjectCard.tsx   # Card de projeto
+│   ├── ProjectCard.tsx   # Card de projeto com preview
+│   ├── Skills.tsx        # Grid de habilidades
+│   └── Timeline.tsx      # Timeline profissional
+├── contexts/             # Context API
+│   └── LoadingContext.tsx # Gerenciamento do estado de loading
 ├── lib/                  # Utilitários
+│   ├── placeholder.ts    # Sistema de placeholders para imagens
 │   └── utils.ts          # Funções auxiliares
 ├── types/                # Definições TypeScript
 │   └── aos.d.ts          # Tipagem para AOS
 └── public/               # Assets estáticos
+    ├── projects/         # Imagens dos projetos
+    │   ├── easybank-landing/
+    │   ├── food-truck/
+    │   ├── private-teachers/
+    │   ├── financial-dashboard/
+    │   ├── extensions-manager/
+    │   └── README.md     # Guia para organização das imagens
     └── cv-gustavo-faria.pdf
 ```
 
@@ -142,11 +193,47 @@ src/
 
 ---
 
+## 🔧 Como Adicionar Imagens dos Projetos
+
+Para adicionar imagens aos seus projetos:
+
+1. **Navegue para** `public/projects/[nome-do-projeto]/`
+2. **Adicione as imagens** com os nomes especificados no README da pasta
+3. **Recomendações:**
+   - Formato: PNG ou JPG
+   - Resolução: 1200x800px (ratio 3:2)
+   - Tamanho máximo: 500KB por imagem
+4. **O sistema automaticamente** exibirá as imagens ou fallbacks elegantes
+
+---
+
+## 📋 Atualizações Recentes
+
+### v2.0.0 - Portfolio Profissional Completo
+- ✨ **Loading Screen** animado implementado
+- 📈 **Timeline Profissional** com experiências e educação
+- 🖼️ **Preview de Projetos** com modal gallery
+- 📧 **Formulário de Contato** funcional com EmailJS
+- 🎯 **About Me** otimizado para recrutadores
+- 🔄 **Context API** para gerenciamento de estado
+- 🎨 **Animações premium** em todos os componentes
+- 📱 **Responsividade** aprimorada
+- ⚡ **Performance** otimizada
+
+### v1.0.0 - Base Inicial
+- 🏗️ Estrutura inicial com Next.js 15
+- 🎨 Design system com Tailwind CSS
+- 💼 Showcase básico de projetos
+- 📊 Grid de skills interativo
+
+---
+
 ## 🤝 Contato
 
 Desenvolvido por **Gustavo Faria**
 
-- 📧 **Email:** [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
+- 📧 **Email:** [gustavofaria985@gmail.com](mailto:gustavofaria985@gmail.com)
+- 📱 **Telefone:** +55 (19) 99838-9595
 - 💼 **LinkedIn:** [linkedin.com/in/gustavo-faria](https://linkedin.com/in/gustavo-faria)
 - 🐱 **GitHub:** [github.com/fariaa01](https://github.com/fariaa01)
 - 🌐 **Portfolio:** [portfolio-se8x.vercel.app](https://portfolio-xdad-7h7nd54tz-fariaa01s-projects.vercel.app)

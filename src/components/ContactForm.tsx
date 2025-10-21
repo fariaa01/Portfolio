@@ -40,7 +40,6 @@ export function ContactForm() {
     setStatus({ type: null, message: "" })
 
     try {
-      // Configuração do EmailJS - você precisará configurar estas variáveis
       const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "your_service_id"
       const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "your_template_id"
       const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "your_public_key"
@@ -52,8 +51,7 @@ export function ContactForm() {
           type: "success",
           message: "Message sent successfully! I'll get back to you soon."
         })
-        
-        // Reset form
+
         setFormData({
           name: "",
           email: "",
